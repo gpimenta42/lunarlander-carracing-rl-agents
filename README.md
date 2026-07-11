@@ -24,6 +24,16 @@ Authors: Alexandre Goncalves, Gaspar Pereira, Joao Henriques, Rita Wang, Victori
 - Achieved the best CarRacing result with PPO: average return `874.59` and `40%` success rate under the project success threshold.
 - Preserved saved models, evaluation logs, and policy videos while stripping notebook outputs to avoid duplicated embedded data.
 
+## Challenges and Design Choices
+
+| Challenge | Design choice |
+| --- | --- |
+| Comparing different RL problem types | Used two environments with different state and action spaces: LunarLander uses low-dimensional vector observations and discrete actions, while CarRacing uses image observations and continuous steering/throttle/brake actions. |
+| Tabular methods on continuous LunarLander states | Discretized the LunarLander state space to test Q-learning and SARSA as baselines, then compared them with neural-network-based methods when uniform binning failed to capture enough state dynamics. |
+| Stabilizing value-based deep RL | Compared DQN with Rainbow-DQN, which combines prioritized replay, multi-step learning, double Q-learning, dueling architecture, distributional Q-learning, and noisy networks for better exploration and stability. |
+| Handling high-dimensional CarRacing observations | Preprocessed image observations by converting frames to grayscale, resizing to `84x84`, and stacking four frames to give the agent temporal context. |
+| Exploration versus stable driving in continuous control | Tuned entropy-related parameters for PPO and SAC because too little entropy reduced robustness, while too much entropy produced unstable or jittery driving behavior. |
+
 ## Results
 
 | Environment | Algorithm | Average return | Std. dev. | Success rate |
@@ -41,13 +51,11 @@ Success rate threshold:
 
 ## Demonstrations
 
+Only selected policy videos are shown: the best LunarLander agent and the two CarRacing methods compared in the final discussion.
+
 ### LunarLander-v3 - Rainbow-DQN
 
 https://github.com/user-attachments/assets/2ee71215-b8a5-434f-863c-0aa7584517cb
-
-### LunarLander-v3 - PPO
-
-https://github.com/user-attachments/assets/eb7c8b9b-1531-4d06-a6be-0c2faa76a8c7
 
 ### CarRacing-v3 - SAC
 
