@@ -49,6 +49,37 @@ Success rate threshold:
 - LunarLander-v3: reward greater than `200`
 - CarRacing-v3: reward greater than `900`
 
+## Evaluation Plots
+
+The LunarLander comparison shows why Rainbow-DQN was selected as the strongest discrete-control agent: it reached higher returns than Simple DQN and PPO during training and remained more stable near the end of the run.
+
+<p align="center">
+  <img src="docs/assets/lunarlander-training-comparison.png" alt="LunarLander training comparison for Simple DQN, Rainbow-DQN, and PPO" width="80%">
+</p>
+
+The CarRacing comparison summarizes the final continuous-control comparison between PPO and SAC. PPO converged faster, while SAC remained competitive but more sensitive to entropy-driven stochastic behavior.
+
+<p align="center">
+  <img src="docs/assets/carracing-ppo-sac-comparison.png" alt="CarRacing training comparison for PPO and SAC" width="80%">
+</p>
+
+<details>
+<summary>Additional evaluation distributions</summary>
+
+Rainbow-DQN return distribution over 30 LunarLander evaluation episodes:
+
+<p align="center">
+  <img src="docs/assets/lunarlander-rainbow-return-distribution.png" alt="Rainbow-DQN LunarLander return distribution over 30 evaluation episodes" width="70%">
+</p>
+
+Best PPO CarRacing return distribution over 30 evaluation episodes:
+
+<p align="center">
+  <img src="docs/assets/carracing-ppo-return-distribution.png" alt="PPO CarRacing return distribution over 30 evaluation episodes" width="70%">
+</p>
+
+</details>
+
 ## Demonstrations
 
 Only selected policy videos are shown: the best LunarLander agent and the two CarRacing methods compared in the final discussion.
@@ -78,6 +109,7 @@ https://github.com/user-attachments/assets/2bde3989-2aa6-4c98-ac3a-646e8294e8be
 ├── logs/                  # Saved models, evaluation CSVs, and NPZ logs
 ├── videos/                # Local policy rollout videos
 ├── report/                # Final project report
+├── docs/assets/           # README figures extracted from the report appendix
 ├── requirements.txt       # Python dependencies
 └── README.md
 ```
