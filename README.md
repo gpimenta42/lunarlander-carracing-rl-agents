@@ -32,7 +32,7 @@ Authors: Alexandre Goncalves, Gaspar Pereira, Joao Henriques, Rita Wang, Victori
 | Tabular methods on continuous LunarLander states | Discretized the LunarLander state space to test Q-learning and SARSA as baselines, then compared them with neural-network-based methods when uniform binning failed to capture enough state dynamics. |
 | Stabilizing value-based deep RL | Compared DQN with Rainbow-DQN, which combines prioritized replay, multi-step learning, double Q-learning, dueling architecture, distributional Q-learning, and noisy networks for better exploration and stability. |
 | Handling high-dimensional CarRacing observations | Preprocessed image observations by converting frames to grayscale, resizing to `84x84`, and stacking four frames to give the agent temporal context. |
-| Exploration versus stable driving in continuous control | Tuned entropy-related parameters for PPO and SAC because too little entropy reduced robustness, while too much entropy produced unstable or jittery driving behavior. |
+| Exploration versus stable driving in continuous control | Tuned entropy-related parameters for PPO and SAC because insufficient entropy reduced robustness, while excessive policy stochasticity could slow convergence or produce jittery driving behavior. |
 
 ## Results
 
