@@ -28,11 +28,9 @@ Authors: Alexandre Goncalves, Gaspar Pereira, Joao Henriques, Rita Wang, Victori
 
 | Challenge | Design choice |
 | --- | --- |
-| Comparing different RL problem types | Used two environments with different state and action spaces: LunarLander uses low-dimensional vector observations and discrete actions, while CarRacing uses image observations and continuous steering/throttle/brake actions. |
-| Tabular methods on continuous LunarLander states | Discretized the LunarLander state space to test Q-learning and SARSA as baselines, then compared them with neural-network-based methods when uniform binning failed to capture enough state dynamics. |
+| Continuous LunarLander states limited tabular RL | Discretized the LunarLander state space to benchmark Q-learning and SARSA, then moved to neural-network-based methods when uniform binning failed to capture enough state dynamics. |
 | Stabilizing value-based deep RL | Compared DQN with Rainbow-DQN, which combines prioritized replay, multi-step learning, double Q-learning, dueling architecture, distributional Q-learning, and noisy networks for better exploration and stability. |
-| Handling high-dimensional CarRacing observations | Preprocessed image observations by converting frames to grayscale, resizing to `84x84`, and stacking four frames to give the agent temporal context. |
-| Exploration versus stable driving in continuous control | Tuned entropy-related parameters for PPO and SAC because insufficient entropy reduced robustness, while excessive policy stochasticity could slow convergence or produce jittery driving behavior. |
+| High-dimensional continuous control in CarRacing | Preprocessed visual observations by converting frames to grayscale, resizing to `84x84`, and stacking four frames for temporal context. PPO and SAC entropy-related parameters were tuned to balance robustness, convergence speed, and smooth driving behavior. |
 
 ## Results
 
