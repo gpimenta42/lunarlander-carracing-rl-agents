@@ -63,23 +63,6 @@ The CarRacing comparison summarizes the final continuous-control comparison betw
   <img src="docs/assets/carracing-ppo-sac-comparison.png" alt="CarRacing training comparison for PPO and SAC" width="80%">
 </p>
 
-<details>
-<summary>Additional evaluation distributions</summary>
-
-Rainbow-DQN return distribution over 30 LunarLander evaluation episodes:
-
-<p align="center">
-  <img src="docs/assets/lunarlander-rainbow-return-distribution.png" alt="Rainbow-DQN LunarLander return distribution over 30 evaluation episodes" width="70%">
-</p>
-
-Best PPO CarRacing return distribution over 30 evaluation episodes:
-
-<p align="center">
-  <img src="docs/assets/carracing-ppo-return-distribution.png" alt="PPO CarRacing return distribution over 30 evaluation episodes" width="70%">
-</p>
-
-</details>
-
 ## Demonstrations
 
 Only selected policy videos are shown: the best LunarLander agent and the two CarRacing methods compared in the final discussion.
