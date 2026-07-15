@@ -4,17 +4,15 @@ This project compares reinforcement learning agents on two Gymnasium control tas
 
 Authors: Alexandre Goncalves, Gaspar Pereira, Joao Henriques, Rita Wang, Victoria Goon
 
-## Technical Stack
+## Methods and Tools
 
-| Area | Tools and skills used |
+| Area | Used in this project |
 | --- | --- |
-| Programming environment | Python, Jupyter |
-| Reinforcement learning | Q-learning, SARSA, DQN, Rainbow-DQN, PPO, SAC |
-| RL tooling | Gymnasium, Stable-Baselines3 |
-| Deep learning | PyTorch |
-| Data processing and evaluation | NumPy, pandas, evaluation callbacks, episodic return analysis |
-| Visualization | Matplotlib, Seaborn, recorded policy videos |
-| Version control | Git, GitHub, organized notebooks and saved artifacts |
+| RL environments | `LunarLander-v3` with discrete actions and `CarRacing-v3` with continuous control |
+| Algorithms explored | Q-learning, SARSA, DQN, Rainbow-DQN, PPO, SAC |
+| Observation handling | State discretization for tabular baselines, vector observations, grayscale resized frame stacking |
+| Training and evaluation | 500,000 training timesteps, 30-episode evaluation, episodic return, success-rate thresholds |
+| Python tools | Gymnasium, Stable-Baselines3, PyTorch, NumPy, pandas, Matplotlib, Seaborn |
 
 ## Key Outcomes
 
